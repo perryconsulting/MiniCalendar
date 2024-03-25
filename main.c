@@ -9,23 +9,23 @@ int days_in_month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // 
 
 int main() {
     int year = 0;
-    printf("Choose a year between 1800 and 10000 to check for a leap year: ");
+    printf("Choose a year between 1800 and 10000 to check for a leap year: \n");
     scanf("%i", &year);
     bool leapYear = isLeapYear(year);
     if (leapYear) {
-        printf("Leap Year");
+        printf("Leap Year\n");
     } else {
-        printf("Not Leap Year");
+        printf("Not Leap Year\n");
     }
 
     int mm;
     int dd;
     int yy;
     int days_left_to_add;
-    printf("Please enter a date between the years 1800 and 10000 in the format 'mm dd yy' and provide the number of days to add to this date: ");
+    printf("\nPlease enter a date between the years 1800 and 10000 in the format 'mm dd yy' and provide the number of days to add to this date: \n");
     scanf("%i %i %i %i", &mm, &dd, &yy, &days_left_to_add);
     addDaysToDate(&mm, &dd, &yy, days_left_to_add);
-    printf("%i %i %i", mm, dd, yy);
+    printf("%i %i %i\n", mm, dd, yy);
 }
 
 bool isLeapYear(int year) {
